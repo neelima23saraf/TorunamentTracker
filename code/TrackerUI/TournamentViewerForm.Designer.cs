@@ -185,7 +185,7 @@
             this.scoreButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.scoreButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.scoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.scoreButton.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.scoreButton.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.scoreButton.Location = new System.Drawing.Point(1178, 497);
             this.scoreButton.Name = "scoreButton";
             this.scoreButton.Size = new System.Drawing.Size(164, 57);
@@ -214,7 +214,7 @@
             this.Controls.Add(this.TournamentName);
             this.Controls.Add(this.headerLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "TournamentViewerForm";
             this.Text = "TournamentViewer";
             this.ResumeLayout(false);

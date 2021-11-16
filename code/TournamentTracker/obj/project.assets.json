@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Studies\\TournamentTracker\\code\\TournamentTracker\\TrackerLibrary.csproj",
-      "projectName": "TrackerLibrary",
-      "projectPath": "D:\\Studies\\TournamentTracker\\code\\TournamentTracker\\TrackerLibrary.csproj",
+      "projectUniqueName": "D:\\Studies\\TournamentTracker\\code\\TournamentTracker\\TrackerLibrary-console.csproj",
+      "projectName": "TrackerLibrary-console",
+      "projectPath": "D:\\Studies\\TournamentTracker\\code\\TournamentTracker\\TrackerLibrary-console.csproj",
       "packagesPath": "C:\\Users\\neeli\\.nuget\\packages\\",
       "outputPath": "D:\\Studies\\TournamentTracker\\code\\TournamentTracker\\obj\\",
       "projectStyle": "PackageReference",

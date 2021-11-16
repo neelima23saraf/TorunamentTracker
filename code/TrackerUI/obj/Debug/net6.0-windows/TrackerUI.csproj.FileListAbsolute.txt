@@ -19,3 +19,6 @@ D:\Studies\TournamentTracker\code\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.C
 D:\Studies\TournamentTracker\code\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.CreateTeamForm.resources
 D:\Studies\TournamentTracker\code\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.CreateTournament.resources
 D:\Studies\TournamentTracker\code\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.TournamentDashboard.resources
+D:\Studies\TournamentTracker\code\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.csproj.CopyComplete
+D:\Studies\TournamentTracker\code\TrackerUI\bin\Debug\net6.0-windows\TrackerLibrary.dll
+D:\Studies\TournamentTracker\code\TrackerUI\bin\Debug\net6.0-windows\TrackerLibrary.pdb

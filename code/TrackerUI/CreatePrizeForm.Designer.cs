@@ -56,7 +56,7 @@
             // placeNumberTextBox
             // 
             this.placeNumberTextBox.Location = new System.Drawing.Point(399, 187);
-            this.placeNumberTextBox.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.placeNumberTextBox.Margin = new System.Windows.Forms.Padding(9);
             this.placeNumberTextBox.Name = "placeNumberTextBox";
             this.placeNumberTextBox.Size = new System.Drawing.Size(614, 50);
             this.placeNumberTextBox.TabIndex = 8;
@@ -100,6 +100,7 @@
             this.prizeAmountTextBox.Name = "prizeAmountTextBox";
             this.prizeAmountTextBox.Size = new System.Drawing.Size(614, 50);
             this.prizeAmountTextBox.TabIndex = 12;
+            this.prizeAmountTextBox.Text = "0";
             // 
             // prizeAmountLabel
             // 
@@ -120,6 +121,7 @@
             this.prizePercentageTextBox.Name = "prizePercentageTextBox";
             this.prizePercentageTextBox.Size = new System.Drawing.Size(614, 50);
             this.prizePercentageTextBox.TabIndex = 14;
+            this.prizePercentageTextBox.Text = "0";
             // 
             // prizePercentagelabel
             // 
@@ -158,6 +160,7 @@
             this.createPrizeButton.TabIndex = 24;
             this.createPrizeButton.Text = "Create Prize";
             this.createPrizeButton.UseVisualStyleBackColor = true;
+            this.createPrizeButton.Click += new System.EventHandler(this.createPrizeButton_Click);
             // 
             // CreatePrizeForm
             // 
@@ -178,7 +181,7 @@
             this.Controls.Add(this.createPrizeLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "CreatePrizeForm";
             this.Text = "CreatePrizeForm";
             this.ResumeLayout(false);

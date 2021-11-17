@@ -1,4 +1,4 @@
-﻿namespace TrackerLibrary
+﻿namespace TrackerLibrary.Models
 {/// <summary>
 /// This class holds information about individual member of the team
 /// </summary>

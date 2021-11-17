@@ -1,4 +1,4 @@
-﻿namespace TrackerLibrary
+﻿namespace TrackerLibrary.Models
 {/// <summary>
 /// This class holds information about the Matches between two teams, winner and the round
 /// </summary>

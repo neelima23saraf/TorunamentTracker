@@ -22,3 +22,11 @@ D:\Studies\TournamentTracker\code\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.T
 D:\Studies\TournamentTracker\code\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.csproj.CopyComplete
 D:\Studies\TournamentTracker\code\TrackerUI\bin\Debug\net6.0-windows\TrackerLibrary.dll
 D:\Studies\TournamentTracker\code\TrackerUI\bin\Debug\net6.0-windows\TrackerLibrary.pdb
+D:\Studies\TournamentTracker\code\TrackerUI\bin\Debug\net6.0-windows\TrackerUI.dll.config
+D:\Studies\TournamentTracker\code\TrackerUI\bin\Debug\net6.0-windows\Dapper.dll
+D:\Studies\TournamentTracker\code\TrackerUI\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\Studies\TournamentTracker\code\TrackerUI\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Studies\TournamentTracker\code\TrackerUI\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\Studies\TournamentTracker\code\TrackerUI\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\Studies\TournamentTracker\code\TrackerUI\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Studies\TournamentTracker\code\TrackerUI\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

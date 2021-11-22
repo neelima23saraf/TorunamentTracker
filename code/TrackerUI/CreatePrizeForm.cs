@@ -27,10 +27,8 @@ namespace TrackerUI
                 //Initilize PrizeModel Object
                 PrizeModel model = new PrizeModel(placeNumberTextBox.Text, placeNameTextBox.Text, prizeAmountTextBox.Text, prizePercentageTextBox.Text);
 
-                foreach (IDataConnection db in GlobalConfig.Connections)
-                {
-                    db.CreatePrize(model);
-                }
+                GlobalConfig.Connections.CreatePrize(model);
+                
                 placeNumberTextBox.Text = "";
                 placeNameTextBox.Text = "";
                 prizeAmountTextBox.Text = "0";

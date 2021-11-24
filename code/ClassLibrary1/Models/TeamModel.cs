@@ -10,7 +10,7 @@ namespace TrackerLibrary.Models
 /// </summary>
     public class TeamModel
     {
-        public List<PersonModeL> TeamMember { get; set; } = new List<PersonModeL>();
+        public List<PersonModel> TeamMember { get; set; } = new List<PersonModel>();
         public string TeamName { get; set; }
     }
 }

@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrackerLibrary;
 using TrackerLibrary.Models;
 
 namespace TrackerUI
 {
     public partial class CreateTeamForm : Form
     {
+        List<PersonModel> selectdTeamMembers = new List<PersonModel>();
+        List<PersonModel> availableTeamMembers = GlobalConfig.Connections.GetAllPerson();
         public CreateTeamForm()
         {
             InitializeComponent();
+            WireUpList();
         }
 
         private void CreateTeamForm_Load(object sender, EventArgs e)
@@ -23,23 +27,40 @@ namespace TrackerUI
 
         }
 
+        private void WireUpList()
+        {
+            selectTeamMemberDropDown.DataSource = null;
+
+            selectTeamMemberDropDown.DataSource = availableTeamMembers;
+            selectTeamMemberDropDown.DisplayMember = "FullName";
+
+            teamMembersListBox.DataSource = null;
+            teamMembersListBox.DataSource = selectdTeamMembers;
+            teamMembersListBox.DisplayMember = "FullName";
+        }
+
+
         private void createMemberButton_Click(object sender, EventArgs e)
         {
-            if (!ValidateForm())
+            if (ValidateForm())
+            {
+                PersonModel person = new PersonModel(firstNameTextBox.Text, lastNameTextBox.Text, emailTextBox.Text, cellTextBox.Text);
+
+                person = TrackerLibrary.GlobalConfig.Connections.CreatePerson(person);
+
+                selectdTeamMembers.Add(person);
+
+                WireUpList();
+
+                firstNameTextBox.Text = "";
+                lastNameTextBox.Text = "";
+                emailTextBox.Text = "";
+                cellTextBox.Text = "";
+            }
+            else
             {
                 MessageBox.Show("Mandatory fields are missing");
             }
-
-            PersonModel person = new PersonModel(firstNameTextBox.Text, lastNameTextBox.Text, emailTextBox.Text, cellTextBox.Text);
-
-            TrackerLibrary.GlobalConfig.Connections.CreatePerson(person);
-
-            firstNameTextBox.Text="";
-            lastNameTextBox.Text = "";
-            emailTextBox.Text = "";
-            cellTextBox.Text = "";
-
-            
 
             
 
@@ -58,6 +79,32 @@ namespace TrackerUI
                 return false;
          
             return  true;
+        }
+
+        private void aadTeamMemberButton_Click(object sender, EventArgs e)
+        {
+            PersonModel p = (PersonModel)selectTeamMemberDropDown.SelectedItem;
+            if (p != null)
+            {
+                availableTeamMembers.Remove(p);
+                selectdTeamMembers.Add(p);
+
+                WireUpList();
+            }
+            
+        }
+
+        private void removeSelectedTeamButton_Click(object sender, EventArgs e)
+        {
+            PersonModel p = (PersonModel)teamMembersListBox.SelectedItem;
+            if (p != null)
+            {
+                availableTeamMembers.Add(p);
+                selectdTeamMembers.Remove(p);
+
+                WireUpList();
+            }
+            
         }
     }
 }

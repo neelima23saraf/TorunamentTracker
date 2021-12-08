@@ -259,6 +259,7 @@
             this.createTeamButton.TabIndex = 28;
             this.createTeamButton.Text = "Create Team";
             this.createTeamButton.UseVisualStyleBackColor = true;
+            this.createTeamButton.Click += new System.EventHandler(this.createTeamButton_Click);
             // 
             // removeSelectedTeamButton
             // 
@@ -271,7 +272,7 @@
             this.removeSelectedTeamButton.Name = "removeSelectedTeamButton";
             this.removeSelectedTeamButton.Size = new System.Drawing.Size(187, 103);
             this.removeSelectedTeamButton.TabIndex = 29;
-            this.removeSelectedTeamButton.Text = "Remove Selected";
+            this.removeSelectedTeamButton.Text = " ";
             this.removeSelectedTeamButton.UseVisualStyleBackColor = true;
             this.removeSelectedTeamButton.Click += new System.EventHandler(this.removeSelectedTeamButton_Click);
             // 

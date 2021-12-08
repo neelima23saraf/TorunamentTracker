@@ -101,5 +101,63 @@ namespace TrackerLibrary.DataAccess.TextHelprs {
             }
             File.WriteAllLines(fileName.FullFilePath(), line);
         }
+
+
+
+        public static void SaveToTeamFile(this List<TeamModel> teamModel, string fileName)
+        {
+            List<string> line = new List<string>();
+            foreach (TeamModel t in teamModel)
+            {
+                line.Add($"{t.Id},{ t.TeamName},{ConvertPeopleListToString(t.TeamMember)}");
+
+            }
+            File.WriteAllLines(fileName.FullFilePath(), line);
+        }
+
+        private static string ConvertPeopleListToString(List<PersonModel> people)
+        {
+            string output ="";
+
+            if (people.Count == 0)
+            {
+                return "";
+            }
+            foreach (PersonModel p in people)
+            {
+                output += $"{p.Id}|";
+
+            }
+
+            output = output.Substring(0,output.Length - 1);
+            return output;
+        }
+
+        public static List<TeamModel> ConvertToTeamModels(this List<string> lines, string peopleFileName)
+        {
+            //teammember file will be like  -- 1,India,1|2|3 that is TeamID, TeamName, TeamMembers 
+            List<TeamModel> teamModel = new List<TeamModel>();
+            List<PersonModel> people = peopleFileName.FullFilePath().LoadFile().ConvertToPersonModels();
+
+            foreach (string line in lines)
+            {
+                string[] cols = line.Split(',');
+                TeamModel t = new TeamModel();
+                t.Id = int.Parse(cols[0]);
+                t.TeamName = cols[1];
+
+                //Store person IDs in TeamFile into PersonIDs array 
+                //Find if the person ID mentioned is present in the TeamFile is a valid person 
+
+                string[] personIds = cols[2].Split('|');
+
+                foreach (string personId in personIds)
+                { 
+                    t.TeamMember.Add(people.Where(x => x.Id == int.Parse(personId)).First());
+                }
+
+            }
+            return teamModel;
+        }
     }
 }

@@ -10,8 +10,9 @@ namespace TrackerUI
         {
             ApplicationConfiguration.Initialize();
 
-            TrackerLibrary.GlobalConfig.InitilizeConnection(TrackerLibrary.DataAccess.DatabaseType.Textfile);
-            Application.Run(new CreateTeamForm());
+            TrackerLibrary.GlobalConfig.InitilizeConnection(TrackerLibrary.DataAccess.DatabaseType.Sql);
+            Application.Run(new CreateTournament());
+            //Application.Run(new CreateTeamForm());
             //Application.Run(new TournamentDashboard());
         }
     }

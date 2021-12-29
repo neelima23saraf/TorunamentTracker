@@ -19,6 +19,9 @@ namespace TrackerUI
         public CreateTeamForm()
         {
             InitializeComponent();
+            selectTeamMemberDropDown.DataSource = null;
+            teamMembersListBox.DataSource = null;
+
             WireUpList();
         }
 

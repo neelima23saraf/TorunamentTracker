@@ -95,7 +95,25 @@ namespace TrackerLibrary.DataAccess
             return model;
         }
 
-         
+        public List<TeamModel> GetTeams()
+        {
+            List<TeamModel> teams = new List<TeamModel>();
+            
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+                teams = connection.Query<TeamModel>("spTeam_GetAll").ToList();
+
+                foreach (var t in teams)
+                {
+                    var personId = new DynamicParameters();
+                    personId.Add("@PersonId", t.Id);
+
+                    t.TeamMember = connection.Query<PersonModel>("spTeamMembers_Get", personId, commandType: CommandType.StoredProcedure).ToList(); 
+                }
+            }
+
+            return teams;
+        }
     }
     
 }

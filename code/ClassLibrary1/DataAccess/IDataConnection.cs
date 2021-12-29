@@ -21,5 +21,7 @@ namespace TrackerLibrary.DataAccess
         
         TeamModel CreateTeam(TeamModel model);
 
+        List<TeamModel> GetTeams();  
+
     }
 }

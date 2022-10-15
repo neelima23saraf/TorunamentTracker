@@ -9,3 +9,4 @@ D:\Studies\TournamentTracker\code\ClassLibrary1\obj\Debug\net6.0\TrackerLibrary.
 D:\Studies\TournamentTracker\code\ClassLibrary1\obj\Debug\net6.0\TrackerLibrary.dll
 D:\Studies\TournamentTracker\code\ClassLibrary1\obj\Debug\net6.0\ref\TrackerLibrary.dll
 D:\Studies\TournamentTracker\code\ClassLibrary1\obj\Debug\net6.0\TrackerLibrary.pdb
+D:\Studies\TournamentTracker\code\ClassLibrary1\obj\Debug\net6.0\TrackerLibrary.csproj.AssemblyReference.cache

@@ -272,7 +272,7 @@
             this.removeSelectedTeamButton.Name = "removeSelectedTeamButton";
             this.removeSelectedTeamButton.Size = new System.Drawing.Size(187, 103);
             this.removeSelectedTeamButton.TabIndex = 29;
-            this.removeSelectedTeamButton.Text = " ";
+            this.removeSelectedTeamButton.Text = " Delete Member";
             this.removeSelectedTeamButton.UseVisualStyleBackColor = true;
             this.removeSelectedTeamButton.Click += new System.EventHandler(this.removeSelectedTeamButton_Click);
             // 
